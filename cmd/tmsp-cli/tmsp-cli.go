@@ -38,64 +38,73 @@ func main() {
 		{
 			Name:  "batch",
 			Usage: "Run a batch of tmsp commands against an application",
-			Action: func(c *cli.Context) error {
-				return cmdBatch(app, c)
+			Action: func(c *cli.Context) {
+				cmdBatch(app, c)
+				return
 			},
 		},
 		{
 			Name:  "console",
 			Usage: "Start an interactive tmsp console for multiple commands",
-			Action: func(c *cli.Context) error {
-				return cmdConsole(app, c)
+			Action: func(c *cli.Context) {
+				cmdConsole(app, c)
+				return
 			},
 		},
 		{
 			Name:  "echo",
 			Usage: "Have the application echo a message",
-			Action: func(c *cli.Context) error {
-				return cmdEcho(c)
+			Action: func(c *cli.Context) {
+				cmdEcho(c)
+				return
 			},
 		},
 		{
 			Name:  "info",
 			Usage: "Get some info about the application",
-			Action: func(c *cli.Context) error {
-				return cmdInfo(c)
+			Action: func(c *cli.Context) {
+				cmdInfo(c)
+				return
 			},
 		},
 		{
 			Name:  "set_option",
 			Usage: "Set an option on the application",
-			Action: func(c *cli.Context) error {
-				return cmdSetOption(c)
+			Action: func(c *cli.Context) {
+				cmdSetOption(c)
+				return
 			},
 		},
 		{
 			Name:  "append_tx",
 			Usage: "Append a new tx to application",
-			Action: func(c *cli.Context) error {
-				return cmdAppendTx(c)
+			Action: func(c *cli.Context) {
+				cmdAppendTx(c)
+				return
 			},
 		},
 		{
 			Name:  "check_tx",
 			Usage: "Validate a tx",
-			Action: func(c *cli.Context) error {
-				return cmdCheckTx(c)
+			Action: func(c *cli.Context) {
+				cmdCheckTx(c)
+				return
 			},
 		},
 		{
 			Name:  "commit",
 			Usage: "Commit the application state and return the Merkle root hash",
-			Action: func(c *cli.Context) error {
-				return cmdCommit(c)
+			Action: func(c *cli.Context) {
+				cmdCommit(c)
+				return
 			},
 		},
 		{
 			Name:  "query",
 			Usage: "Query application state",
-			Action: func(c *cli.Context) error {
-				return cmdQuery(c)
+			Action: func(c *cli.Context) {
+				cmdQuery(c)
+				return
 			},
 		},
 	}
